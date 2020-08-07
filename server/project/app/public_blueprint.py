@@ -10,15 +10,8 @@ public_blueprint = Blueprint('public', __name__)
 
 @public_blueprint.route('/', methods=['GET'])
 def home():
-    products = [product.to_json() for product in Product.query.all()]
+    products = [product.to_json() for product in Product.query.limit(4).all()]
     return render_template("pages/public/index.html", products=products)
-
-@public_blueprint.route('/public/ping', methods=['GET'])
-def ping():
-    return jsonify({
-        'status': 'success',
-        'message': 'pong!'
-    })
 
 @public_blueprint.route('/public/all', methods=['GET'])
 def get_all():

@@ -21,6 +21,9 @@ def create_app(script_info=None):
     from project.app.public_blueprint import public_blueprint
     app.register_blueprint(public_blueprint)
 
+    from project.app.admin_blueprint import admin_blueprint
+    app.register_blueprint(admin_blueprint)
+
     @app.shell_context_processor
     def ctx():
         return {'app': app, 'db': db}
