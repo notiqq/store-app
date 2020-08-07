@@ -19,19 +19,24 @@ def recreate_db():
 def seed_db():
     """Seeds the database."""
     db.session.add(Product(
-        name='Apple iPhone 11 Pro Max',
-        price= '1099',
-        image_url='https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-max-space-select-2019?wid=834&hei=1000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1566953858806'
+        name='FLORAL JACKQUARD PULLOVER',
+        price= '120.00',
+        image_url='static/public/images/product-1.jpg'
     ))
     db.session.add(Product(
-        name='Apple iPhone 7',
-        price='200',
-        image_url='https://cdn.movertix.com/media/catalog/product/cache/image/1200x/a/p/apple-iphone-7-en-negro-mate-de-32gb-detras.jpg'
+        name='CUTE JACKQUARD DRESS',
+        price='200.00',
+        image_url='static/public/images/product-2.jpg'
     ))
     db.session.add(Product(
-        name='Apple iPhone XS',
-        price='508',
-        image_url='https://stylus.ua/thumbs/390x390/c2/24/839696.jpeg'
+        name='CUTE JACKQUARD SKIRT',
+        price='508.00',
+        image_url='static/public/images/product-3.jpg'
+    ))
+    db.session.add(Product(
+        name='CUTE JACKQUARD PULLOVER',
+        price='320.00',
+        image_url='static/public/images/product-4.jpg'
     ))
     db.session.commit()
 
