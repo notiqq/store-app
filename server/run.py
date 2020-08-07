@@ -1,7 +1,7 @@
 from flask.cli import FlaskGroup
 
 from project import create_app, db
-from project.app.models import Product
+from project.entities.product import Product
 
 
 app = create_app()

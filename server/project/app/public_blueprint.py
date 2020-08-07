@@ -2,7 +2,7 @@ import os
 
 from flask import Blueprint, jsonify, request, render_template
 
-from project.app.models import Product
+from project.entities.product import Product
 from project import db
 
 

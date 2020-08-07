@@ -11,6 +11,17 @@ Winkel | Administration
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item active">Products</li>
         </ol>
+        <div class="offset-md-11">
+            <a class="btn btn-primary" href="/admin/product/add">Create Product</a>
+        </div>
+        <br />
+        {% if products|length == 0 %}
+        <div class="offset-md-3">
+            <h4>There are no products at this moment. Please, create new!</h4>
+        </div>
+        {% endif %}
+        
+        {% if products|length > 0 %}
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table mr-1"></i>
@@ -41,7 +52,7 @@ Winkel | Administration
                                 <td>{{product.id}}</td>
                                 <td>{{product.name}}</td>
                                 <td>${{product.price}}</td>
-                                <td>{{product.id}}</td>
+                                <td><a class="btn btn-primary" href="/admin/product/edit/{{product.id}}">Edit</a> <a class="btn btn-danger" href="/admin/product/delete/{{product.id}}">Delete</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -49,6 +60,8 @@ Winkel | Administration
                 </div>
             </div>
         </div>
+        {% endif %}
+
     </div>
 </main>
 
