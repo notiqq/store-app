@@ -12,24 +12,25 @@ Winkel | Administration
             <li class="breadcrumb-item active">Products</li>
         </ol>
         <div class="col-md-4">
-            <form>
+            <form action="/admin/product/edit" method="post" enctype="multipart/form-data">
+                <input type="hidden" id="id" name="id" value="{{product.id}}">
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter name">
+                  <input type="text" class="form-control" id="name" aria-describedby="name" name="name" placeholder="Enter name" value="{{product.name}}">
                   <small id="emailHelp" class="form-text text-muted">Product name</small>
                 </div>
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="text" class="form-control" id="price" aria-describedby="price" placeholder="Enter price">
+                    <input type="text" class="form-control" id="price" aria-describedby="price" name="price" placeholder="Enter price" value="{{product.price}}">
                     <small id="emailHelp" class="form-text text-muted">Product price</small>
                 </div>
                 <div class="form-group">
                     <label for="image_url">Image Url</label>
-                    <input type="text" class="form-control" id="image_url" aria-describedby="image_url" placeholder="Enter image url">
+                    <input type="text" class="form-control" id="image_url" aria-describedby="image_url" name="image_url" placeholder="Enter image url" value="{{product.image_url}}">
                     <small id="emailHelp" class="form-text text-muted">Product image</small>
                 </div>
     
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Save</button>
               </form>
         </div>
     </div>
